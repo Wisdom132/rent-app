@@ -3,14 +3,18 @@
     <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
       <div class="container">
         <router-link class="navbar-brand" to="/">Navbar</router-link>
-        <span
-          class="fa fa-bars"
+        <button
+          class="navbar-toggler"
+          type="button"
           data-toggle="collapse"
           data-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
           aria-label="Toggle navigation"
-        ></span>
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item active">
@@ -34,5 +38,14 @@
 <style scoped>
 .nav-item {
   padding: 0px 10px;
+}
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.navbar-toggler {
+  border: 0px;
 }
 </style>
