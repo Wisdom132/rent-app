@@ -1,5 +1,5 @@
 <template>
-  <section class="py-5">
+  <section id="list" class="py-5">
     <div class="container">
       <div class="row mx-auto mb-4">
         <div class="col-md-6 d-flex">
@@ -18,7 +18,7 @@
       </div>
       <div class="row mx-auto">
         <div class="col-md-4 mb-4 mx-auto" v-for="(list,key) in lists" :key="key">
-          <div class="card" style="width: 19rem;">
+          <div class="card" style="width: auto;">
             <img :src="list.image" class="card-img-top" alt="..." />
             <div class="card-body">
               <h5 class="card-title">{{list.title}}</h5>
@@ -136,6 +136,9 @@ export default {
 };
 </script>
 <style scoped>
+#list {
+  background: #f7f9fb;
+}
 @media (max-width: 420px) {
   .card {
     width: auto !important;

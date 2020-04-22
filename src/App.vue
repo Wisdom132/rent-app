@@ -1,18 +1,9 @@
 <template>
-  <div id="app">
-    <navbar />
+  <div>
     <router-view />
   </div>
 </template>
-<script>
-import navbar from "@/partials/navbar";
-export default {
-  components: {
-    navbar
-  }
-};
-</script>
-<style>
+<style scoped>
 * {
   font-family: "Quicksand", sans-serif;
 }

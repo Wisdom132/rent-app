@@ -4,29 +4,51 @@ import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
 
-const routes = [{
-    path: '/',
-    name: 'Home',
-    component: Home
+const routes = [
+
+
+
+  {
+    path: "/",
+    name: "home",
+    component: () => import("@/layouts/blank"),
+    redirect: "/",
+    children: [{
+      path: '/',
+      name: 'Home',
+      component: Home
+    }, {
+      path: '/property',
+      name: 'Property',
+      component: () => import( /* webpackChunkName: "about" */ '../views/Property.vue')
+    }, {
+      path: "/login",
+      nme: "Login",
+      component: () => import('../views/Login.vue')
+    }, {
+      path: "/sign-up",
+      nme: "Signup",
+      component: () => import('../views/Signup.vue')
+    }]
   },
   {
-    path: '/property',
-    name: 'Property',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import( /* webpackChunkName: "about" */ '../views/Property.vue')
-  },
-  {
-    path: "/login",
-    nme: "Login",
-    component: () => import('../views/Login.vue')
-  },
-  {
-    path: "/sign-up",
-    nme: "Signup",
-    component: () => import('../views/Signup.vue')
+    path: "/admin",
+    name: "admin",
+    component: () => import("@/layouts/admin"),
+    redirect: "/admin/dashboard",
+    children: [{
+        path: "dashboard",
+        nme: "Dashboard",
+        component: () => import('../components/admin/dashboard.vue')
+      },
+      {
+        path: "houses",
+        nme: "house",
+        component: () => import('../components/admin/houses.vue')
+      }
+    ]
   }
+
 ]
 
 const router = new VueRouter({
