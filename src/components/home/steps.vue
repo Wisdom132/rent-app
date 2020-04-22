@@ -14,7 +14,7 @@
         </div>
         <div class="col-md-4 mx-auto">
           <img src="../../assets/schedule.svg" id="image" class="img-fluid m-4" alt />
-          <h5 class="mb-4 step">Shedule A Tour</h5>
+          <h5 class="mb-4 step">Schedule A Tour</h5>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Impedit nisi at, dolores voluptatibus aperiam veniam.</p>
         </div>
         <div class="col-md-4 mx-auto">
